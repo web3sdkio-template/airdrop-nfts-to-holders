@@ -1,10 +1,10 @@
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { Web3sdkioSDK } from "@web3sdkio/sdk";
 import fs from "fs";
 import path from "path";
 
 (async () => {
   // TODO: Replace this with your network
-  const sdk = new ThirdwebSDK("goerli");
+  const sdk = new Web3sdkioSDK("goerli");
 
   // TODO: Replace this with your smart contract address
   const contract = await sdk.getContract(

@@ -1,13 +1,13 @@
 ## Airdrop NFTs to Holders
 
-Here we use the thirdweb's node sdk to create a script for getting all owners and creating a csv file. This csv file can later be used to airdrop edition NFTs to all owners.
+Here we use the web3sdkio's node sdk to create a script for getting all owners and creating a csv file. This csv file can later be used to airdrop edition NFTs to all owners.
 
 ## Setup
 
 To run the project, first clone this repository:
 
 ```bash
-npx thirdweb@latest create --template airdrop-nfts-to-holders
+npx web3sdkio@latest create --template airdrop-nfts-to-holders
 ```
 
 Modify the [airdrop.mjs](./scripts/airdrop.mjs) file with your **smart contract address** and **network**.
@@ -25,7 +25,7 @@ This will generate a new file called `nfts.csv` containing your snapshot, which 
 In the script we are first getting the erc 721 collection:
 
 ```js
-const sdk = new ThirdwebSDK("goerli");
+const sdk = new Web3sdkioSDK("goerli");
 const contract = await sdk.getContract(
   "0x08d4CC2968cB82153Bb70229fDb40c78fDF825e8"
 );
@@ -67,4 +67,4 @@ fs.writeFileSync(path.join(path.dirname("."), "nfts.csv"), csvString);
 
 ## Join our Discord!
 
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+For any questions, suggestions, join our discord at [https://discord.gg/web3sdkio](https://discord.gg/web3sdkio).
